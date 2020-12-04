@@ -1,0 +1,28 @@
+
+<script>
+
+    let karnivora = ['singa','macan'];
+    let herbivora = ['kambing', 'kebo'];
+    let omnivora = ['ayam','tikus'];
+
+    let hewan = [
+        karnivora,
+        herbivora,
+        omnivora
+    ]
+
+    console.log(hewan);
+
+    let a = 0;
+    let b = 0;
+    hewan.forEach(function(jenis){
+        b = 0;
+        jenis.forEach(function(binatang){
+            console.log('index ke ' + a + ' ' + b + ' adalah : '+ binatang);
+            b++;
+            
+        })
+        a++;
+    })
+
+</script>

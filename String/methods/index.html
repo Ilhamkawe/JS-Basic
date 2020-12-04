@@ -1,0 +1,93 @@
+<script>
+
+    // =======================================================================================================================================
+
+    // String length 
+    // untuk menghitung huruf pada suatu strings
+    var l = "abcdefghijklmnopqrstuvwxyz";
+    var e = l.length; //26
+    console.log(e);
+
+    // =======================================================================================================================================
+
+    // indexOf 
+    // Mereturnkan index dari posisi kata pada kalimat (index Huruf pertama dari kata yang dicari)
+    var txt = "Please Locate where 'Locate' occurs !";
+    var pos = txt.indexOf("Locate");
+    console.log(pos);
+
+    // lasIndexOf
+    // Mereturnkan index dari posisi kata pada kalimat (index Huruf pertama dari kata terakhir yang dicari)
+    var pos2 = txt.lastIndexOf("Locate");
+    console.log(pos2);
+
+    // index dimulai dari 0
+    // indexOf dan lastIndexOf mereturnkan -1 jika kata yang dicari tidak ditemukan
+
+    // keduanya bisa menerima parameter ke2 untuk posisi awal 
+    var pos3 = txt.indexOf("Locate",5);
+    console.log(pos3);
+
+    // lastIndexOf mencari dari index terakhir ke awal
+    var pos4 = txt.lastIndexOf("Locate",15);
+    console.log(pos4);
+
+    // =======================================================================================================================================
+
+    // Search
+    // Mencari String didalam String, dan mereturn kan indexnya  
+    var cari = txt.search("Locate");
+    console.log(cari);
+
+    // perbedaan dan indexOf adalah search tidak bisa menerima argument kedua (menentukan posisi awal)
+
+    // =======================================================================================================================================
+
+    // Extract String Parts
+    // ada 3 cara untuk meng extract string part
+    // 1. slice(start,end);
+    // 2. substring(start,end);
+    // 3. substr(start,end);
+
+    // slice()
+    // mengekstrak bagian string dan mereturnkan bagian yang diekstrak menjadi string baru 
+    // slice() membutuh kan 2 parameter yaitu index dimulai dan index berakhir
+    var txt2 = "Apple, Banana, Kiwi";
+    var res = txt2.slice(7,13);
+    console.log(res); //Banana
+
+    // Pengingat : index dimulai dari 0
+
+    // Jika parameter pada slice() bernilai negative , posisinya akan dihitung dari belakang 
+    var res = txt2.slice(-12,-6);
+    console.log(res); //Banana
+
+    // jika parameter pada slice() hanya satu dan positif , akan dimulai dari awal hingga akhir
+    var res = txt2.slice(7);
+    console.log(res); //Banana, Kiwi
+
+    // jika parameter pada slice() hanya satu dan negatif , akan dimulai dari akhir hingga awal
+    var res = txt2.slice(-12);
+    console.log(res); //Banana, Kiwi
+
+    // substring()
+    // substring sama seperti slice , hanya saja substring tidak bisa menerima argument bernilai negative
+    var res = txt2.substring(7,13);
+    console.log(res); //Banana
+
+    // substr()
+    // substr seperti substring hanya saja argument kedua adalah jumlah digitnya
+    var res = txt2.substr(7,6); 
+    console.log(res); //Banana
+
+    // =======================================================================================================================================
+
+    // Replace
+    //mereplace kata pada kalimat, hanya kalimat yang pertama di temukan
+    var txt3 = "Nama Saya Kawe";
+    var res = txt3.replace("Kawe", "Ilham");
+    console.log(res);
+
+    var txt3 = "Nama Saya "
+    // =======================================================================================================================================
+</script>
